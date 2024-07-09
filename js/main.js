@@ -2,7 +2,7 @@ const apiKey = '1228b0c7766e434683292832240207';
 let locationInput = document.querySelector('#locationInput');
 
 locationInput.addEventListener("change", () => {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locationInput.value}&days=6`;
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locationInput.value}&days=3`;
     getData(url)
 })
 
@@ -12,7 +12,7 @@ function currentPosition(location) {
     let lat = location.coords.latitude;
     let lon = location.coords.longitude;
     let currentlocation = `${lat},${lon}`
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${currentlocation}&days=6`;
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${currentlocation}&days=3`;
     getData(url)
 
 }
@@ -73,7 +73,7 @@ function displayWeather(data) {
         let day = date.toLocaleDateString("en-us", { weekday: "long" });
         let month = date.toLocaleDateString("en-us", { month: "short" });
         forecastBox += `
-                        <div class="col-md-2 overflow-hidden">
+                        <div class="col-md-4 overflow-hidden">
                     <div class="cardContainer overflow-hidden">
                         <div class="card overflow-hidden">
                             <p class="day">${day}</p>
