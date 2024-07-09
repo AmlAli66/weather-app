@@ -2,7 +2,7 @@ const apiKey = '1228b0c7766e434683292832240207';
 let locationInput = document.querySelector('#locationInput');
 
 locationInput.addEventListener("change", () => {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locationInput.value}&days=3`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${locationInput.value}&days=3`;
     getData(url)
 })
 
@@ -12,7 +12,7 @@ function currentPosition(location) {
     let lat = location.coords.latitude;
     let lon = location.coords.longitude;
     let currentlocation = `${lat},${lon}`
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${currentlocation}&days=3`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${currentlocation}&days=3`;
     getData(url)
 
 }
