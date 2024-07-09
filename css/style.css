@@ -1,0 +1,188 @@
+/*  ============>Global<=========== */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left top, #766793, #766396, #775f9a, #785b9c, #7a579f, #775fa7, #7466af, #706eb7, #6a81c1, #6b93c8, #75a4cb, #87b3cd);
+    min-height: 110vh;
+    font-family: cursive;
+}
+
+/*  ============>Scrollbar<=========== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #341860e4;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: #7482BD;
+}
+
+/*  ============>Navbar<=========== */
+
+.logo {
+    width: 100px;
+}
+
+.location-search {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.location-search form {
+    width: 99%;
+}
+
+.locationInput {
+    width: calc(100% - 5px);
+    height: 40px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+}
+
+/* //////////////////////////////////////////////////// */
+/* ============>Current weather<=========== */
+
+.current-weather .style-img {
+    width: 250px;
+}
+
+
+
+.today-card {
+    width: 100%;
+    padding-inline: 10px;
+    cursor: pointer;
+
+
+}
+
+.wind-icon {
+    width: 50px;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ============>forecast section<===========  */
+.cardContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(123, 169, 204, 0.362);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    cursor: pointer;
+}
+
+.day,
+.city {
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 1.2px;
+    color: white;
+}
+
+.weather {
+    font-weight: 500;
+    font-size: 0.7em;
+    letter-spacing: 1.2px;
+    color: rgb(19, 78, 142);
+}
+
+.temp {
+    font-size: 1.8em;
+    color: white;
+}
+
+.minmaxContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.min,
+.max {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 4px;
+}
+
+.max {
+    align-items: flex-start;
+    border-left: 2px solid white;
+}
+
+.maxHeading,
+.minHeading {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: white;
+}
+
+.maxTemp,
+.minTemp {
+    font-size: 0.6em;
+    font-weight: 500;
+    color: rgb(197, 197, 197);
+}
+
+.cardContainer::before {
+    width: 85px;
+    height: 85px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
+    border-radius: 50%;
+    left: 100px;
+    top: 50px;
+    transition: all 1s;
+}
+
+.cardContainer:hover::before {
+    transform: translate(-50px, 50px);
+}
+
+/* ////////////////////////////////////////////////////////////////////// */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="icon" href="images/fav icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<body>
+    <!-- ============>Navbar<=========== -->
+    <nav class="navbar bg-body-tertiary my-2">
+        <div class="container">
+            <div class="row w-100 align-items-center">
+                <div class="col-md-3">
+                    <div class="d-flex align-items-center">
+                        <img src="images/fav icon.png" class="logo" alt="">
+                        <a class="navbar-brand text-white fs-3" href="#">Weather</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class=" d-flex justify-content-around align-items-center">
+                        <div class="location-search me-3">
+                            <form class="d-flex  " role="search">
+                                <input class="locationInput " id="locationInput" type="search"
+                                    placeholder="Find your location..." aria-label="Search">
+                            </form>
+                        </div>
+                        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"> </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end text-bg-light bg-opacity-50" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><a class="navbar-brand text-light  fs-3"
+                        href="#">Weather</a></h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light " href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light " href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light " href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light " href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ============>Current weather<=========== -->
+    <div class="current-weather me-auto ju " id="todayWeather">
+
+    </div>
+
+
+    <!-- ============>forecast section<=========== -->
+    <section class="forecastdivs my-4">
+        <div class="container">
+            <div class="row gy-5 " id="forecastRow">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
